@@ -15,4 +15,4 @@ const File = new mongoose.Schema(
     timestamps: true
 });
 
-modules.exports = mongoose.model('File', File);
+module.exports = mongoose.model('File', File);
