@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 
-import { MdInsertDriveFile } from 'react-icons/md'
+import { distanceInWords } from 'date-fns';
+import pt from 'date-fns/locale/pt';
+import { MdInsertDriveFile } from 'react-icons/md';
 
 import './styles.css';
 import logo from '../../assets/logo.svg';
@@ -32,7 +34,7 @@ export default class Box extends Component {
                 <strong>{file.title}</strong>
               </a>
 
-              <span>{file.createdAt}</span>
+              <span>criado há {distanceInWords(file.createdAt, new Date(), {locale: pt})}</span>
             </li>
           )) }          
         </ul>
