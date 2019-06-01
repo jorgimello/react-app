@@ -15,7 +15,7 @@ export default class Main extends Component {
       title: this.state.newBox,
     });
 
-    console.log(response.data);
+    this.props.history.push(`/box/${response.data._id}`);
   }
 
   handleInputChange = e => {
@@ -24,11 +24,11 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div id="main-container">
+      <div id='main-container'>
         <form onSubmit={this.handleSubmit}>
-          <img src={logo} alt=""/>
-          <input placeholder="Criar um box" value={this.state.newBox} onChange={this.handleInputChange} />
-          <button type="submit">Criar</button>
+          <img src={logo} alt=''/>
+          <input placeholder='Criar um box' value={this.state.newBox} onChange={this.handleInputChange} />
+          <button type='submit'>Criar</button>
         </form>
       </div>
     );
