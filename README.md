@@ -1,5 +1,5 @@
 # React boxes
-A new app developed with React (React Native also coming).
+A new app developed with React and React Native.
 
 ## About
 This app can create boxes and inside each box you can include any sort of file.
