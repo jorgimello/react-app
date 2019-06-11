@@ -11,6 +11,7 @@ export default class Main extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    
     const response = await api.post('boxes', {
       title: this.state.newBox,
     });
